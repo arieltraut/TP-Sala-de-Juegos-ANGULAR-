@@ -1,0 +1,56 @@
+<body>
+
+    <div class="container">
+
+
+    <h1>
+        Piedra Papel Tijera
+      </h1>
+
+      <div class="container panel-seleccion">
+
+       <div class="grupo-fotos">
+        <img class="pptImagen" (click)="Jugar('piedra')" src="./assets/imagenes/piedra.png" alt="">
+
+
+
+        <img class="pptImagen" (click)="Jugar('papel')" src="./assets/imagenes/papel.png" alt="">
+
+
+
+        <img class="pptImagen" (click)="Jugar('tijera')" src="./assets/imagenes/tijera.png" alt="">
+
+      </div>
+
+      <div class="seleccion row">
+
+          <div class="container-img">
+             <label for="MiSeleccion">Jugador</label>
+      <img *ngIf="seleccionUsuario" id="MiSeleccion" src="./assets/imagenes/{{seleccionUsuario}}.png" alt="">
+
+      <div class="puntos"><h1>{{puntosUsuario}}</h1></div>
+
+    </div>
+
+
+      <div class="container-img">
+          <label for="seleccionPc">PC</label>
+        <img *ngIf="seleccionUsuario" id="seleccionPc" src="./assets/imagenes/{{seleccionPc}}.png" alt="">
+
+       <div class="puntos"><h1>{{puntosPc}}</h1></div>
+
+    </div>
+
+    </div>
+    <br>
+    <div class="mensaje"  > <h1>{{mensaje}}</h1></div>
+
+
+
+        <button class="btn btn-jugar" (click)="NuevoJuego()"> Jugar de Nuevo</button>
+
+
+      </div>
+
+    </div>
+    </body>

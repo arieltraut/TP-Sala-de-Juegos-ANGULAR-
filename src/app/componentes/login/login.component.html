@@ -1,4 +1,96 @@
-<!--div style="margin: 20% auto; width: 30%;">
+<div class="container-fluid">
+    <div class="row no-gutter">
+      <!-- The image half -->
+      <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+      <!-- The content half -->
+      <div class="col-md-6 bg-light">
+        <div class="login d-flex align-items-center py-5">
+
+          <!-- Demo content-->
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 col-xl-7 mx-auto">
+                <!-- Alert ERROR-->
+                <div #alertError class="alert alert-danger d-none" role="alert">
+                  Lo sentimos! Ocurrio un error
+                </div>
+                <h3 class="display-4">Inicia sesión</h3>
+                <p class="text-muted mb-4">Para poder jugar debes inciar sesión.</p>
+                <form>
+                  <div class="form-group mb-3">
+                    <input id="inputEmail" #userEmail type="email" placeholder="Correo electronico" required="" autofocus=""
+                      class="form-control rounded-pill border-0 shadow-sm px-4">
+                  </div>
+                  <div class="form-group mb-3">
+                    <input id="inputPassword" #userPassword type="password" placeholder="Contraseña" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input id="customCheck1" type="checkbox" checked class="custom-control-input">
+                    <label for="customCheck1" class="custom-control-label">Recordar contraseña</label>
+                  </div>
+                  <button *ngIf="!isLoading" type="submit" class="btn btn-dark btn-block text-uppercase mb-2 rounded-pill shadow-sm"
+                    (click)="onLogin(userEmail.value, userPassword.value)">Ingresar</button>
+                  <div *ngIf="isLoading" class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                  <div class="text-center d-flex justify-content-between mt-4">
+                    <p>No tienes una cuenta? <a routerLink="/Registro" class="font-italic text-muted">
+                        <u>Crear</u></a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div><!-- End -->
+        </div>
+      </div><!-- End -->
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- div style="margin: 20% auto; width: 30%;">
   <div class="row">
     <div class="col-lg-6">
       Usuario
@@ -20,8 +112,8 @@
       <button (click)="Entrar()" class="btn btn-info btn-lg" >Entrar</button>
     </div>
   </div>
-</div-->
- <div class="container" >
+</div -->
+ <!-- <div class="container" >
   <div class="jumbotron" style="padding:50px;">
     <form action="return true;">
       <div class="imgcontainer">
@@ -34,15 +126,15 @@
 
         <label><b>Clave</b></label>
         <input type="password" placeholder="Clave"  [(ngModel)]="clave" name="psw" required>
-            
+
         <button *ngIf="logeando"  (click)="MoverBarraDeProgreso()" >Ingresar</button>
-       
+
         <div *ngIf="!logeando" class="progress">
             <div class="progress-bar progress-bar-info progress-bar-striped active" [class]="clase" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" [style.width]="ProgresoDeAncho" >
               {{progresoMensaje}} - {{progreso}}%
             </div>
         </div>
-       
+
         <input type="checkbox" checked="checked"> Recordar mis datos
       </div>
 
@@ -51,7 +143,7 @@
         <button type="button" class="aceptbtn" routerLink="/Registro" >Registrarse</button>
         <span class="psw">Te olvidaste <a href="#">la clave?</a></span>
       </div>
-     
+
     </form>
   </div>
-</div>
+</div> -->

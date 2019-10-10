@@ -11,11 +11,18 @@ export class PrincipalComponent implements OnInit {
     isFirstOpen: true,
     isFirstDisabled: false
   };
+
+  public juego = 1;
+
+  carrusel() {
+    this.juego = 2;
+  }
+
   constructor() {  }
 
   ngOnInit() {
   }
 
- 
+
 
 }

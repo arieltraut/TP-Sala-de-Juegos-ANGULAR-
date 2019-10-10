@@ -2,24 +2,24 @@
 <!--app-menu></app-menu-->
 <!-- index.html -->
 
-
+<!--
 <form name="juego">
 <ul>
    <li>
    Primer número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-  
+
   </li>
   <li>
    Operador: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-    
+
   </li>
   <li>
    Segundo número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-    
+
   </li>
   <li>
     Respuesta: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
-     
+
    </li>
   <li>
     <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button></h2>
@@ -29,10 +29,52 @@
   </li>
   <li>
     <h2><p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p></h2>
-
     <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
     <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
   </li>
 </ul>
+</form> -->
 
-</form>
+
+
+<!--The content below is only a placeholder and can be replaced.-->
+<!--app-menu></app-menu-->
+<!-- index.html -->
+
+
+<form name="juego" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+    <div class="centro">
+
+     <p style="font-size: 20px;">
+      Primer número:
+      <input  placeholder="{{nuevoJuego.primerNumero}}" name="numeroIngresado" type="text" class="centro" style="width:100%; font-style: italic; font-size: 40px" readonly/>
+    <p>
+
+
+        <p style="font-size: 20px;">
+      Operador: <input placeholder="{{nuevoJuego.operando}}" name="numeroIngresado" type="text" class="centro" style="width:100%; font-style: italic; font-size: 40px" readonly/>
+    </p>
+
+    <p style="font-size: 20px;">
+    Segundo número: <input placeholder="{{nuevoJuego.segundoNumero}}" name="numeroIngresado" type="text" class="centro" style="width:100%; font-style: italic; font-size: 40px" readonly/>
+  </p>
+
+  <p style="font-size: 20px; align-content: initial;">
+    Respuesta: <input [(ngModel)]="nuevoJuego.eleccionUsuario" placeholder="Ingrese numero..." name="numeroIngresado" type="text" class="form-control" pKeyFilter="int" style="width:100%; align-content: center;"/>
+  </p>
+
+  <br>
+    <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button></h2>
+
+    <br>
+    <h2 [hidden]="!ocultarVerificar" ><button  (click)="NuevoJuego()"  class="btn btn-info btn-lg">Nuevo</button></h2>
+
+
+    <h5   [hidden]="nuevoJuego.eleccionUsuario" ><p><i class="fa fa-spinner fa-spin"></i> Ingrese Numero <i class="fa fa-spinner fa-spin"></i></p></h5>
+
+    <h3 [hidden]="!nuevoJuego.gano">Usted adivino el número  </h3>
+    <h3 [hidden]="nuevoJuego.gano">Usted aún no gano </h3>
+
+  </div>
+  </form>
+  <div id="snackbar">{{Mensajes}}</div>

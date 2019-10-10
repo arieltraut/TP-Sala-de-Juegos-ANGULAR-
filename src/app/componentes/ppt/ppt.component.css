@@ -1,0 +1,136 @@
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.pptImagen
+{
+  height: 120px;
+  width: 100px;
+  border-width: 2px;
+
+  border-radius: 17%;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  overflow:hidden;
+}
+
+
+.pptImagen:hover{-webkit-transform:scale(1.1);transform:scale(1.1);}
+.pptImagen:active{filter: opacity(.5);}
+
+.grupo-fotos
+{
+  margin-left: 33%;
+}
+.btn-ppt
+{
+  height: 15%;
+  width: 15%;
+  background-color:white;
+  padding-left: 1px;
+  padding-right: 1px;
+
+}
+
+.btn-jugar
+{
+  background-color: rgba(181, 128, 230, 0.89);
+  width: 300px;
+  margin-left: 35%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+}
+
+body
+{
+
+  /*background-image: url("../../../assets/imagenes/fondo.gif");*/
+  margin-bottom: 0%;
+}
+.container{
+  background-color: rgba(233, 235, 236,0.25);
+}
+
+
+
+
+.seleccion{
+  width: 100%;
+  height: 25%;
+  border-width: 1px;
+  border-color: antiquewhite;
+  padding-left: 3px;
+  /* padding-right: 3px; */
+  padding-bottom: 3px;
+  padding-top: 3px;
+
+
+}
+.seleccion h1
+{
+  position: relative;
+
+  color: white;
+  font-size: 130px;
+  margin-bottom: 2px;
+}
+
+label{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  float: left;
+  margin-bottom: 0px;
+  margin-top: 1px;
+
+
+}
+.container-img{
+  position: left;
+  width: 45%;
+  height: 300px;
+  display: block;
+  float: right;
+  /* border-style: solid; */
+  border-color: rgb(91, 186, 230);;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-left: 5px;
+  margin-right: auto;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.container-img img{
+  border-width: 2px;
+  /* border-style: solid; */
+  border-color: black;
+  float: right;
+  position: relative;
+  margin-top: 25px;
+  margin-left: 1px;
+  width: 40%;
+  height: 90%;
+
+
+}
+.puntos
+{
+  color:dodgerblue ;
+  text-align: center;
+  float: right;
+  position: relative;
+  height: 90%;
+  width: 40%;
+  margin-top: 25px;
+  margin-bottom: 2px;
+  padding-top: 2px;
+
+
+
+}
+
+

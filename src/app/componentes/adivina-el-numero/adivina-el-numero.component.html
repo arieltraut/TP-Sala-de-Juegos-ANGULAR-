@@ -5,22 +5,62 @@
   <h1>
     {{nuevoJuego.nombre}}!
   </h1>
- </div>
+</div>
 <h2></h2>
-<form name="juego">
+<!-- <form name="juego"> -->
 
-   <label>ingrese numero:  </label>  <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
+   <!-- <label>ingrese numero:  </label>  <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
     <h1>{{nuevoJuego.numeroIngresado}}  </h1>
- 
+
     <h2 [hidden]="ocultarVerificar"><button  *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button></h2>
- 
+
     <h2><button *ngIf="nuevoJuego.numeroSecreto==0 " (click)="generarnumero()"  class="btn btn-info btn-lg">Nuevo número secreto</button></h2>
- 
+
     <h2><p *ngIf="nuevoJuego.numeroSecreto!=0" ><i class="fa fa-spinner fa-spin"></i>Esperando que ingrese un número</p></h2>
 
     <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
     <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
 
-
 </form>
-<div id="snackbar">{{Mensajes}}</div>
+<div id="snackbar">{{Mensajes}}</div> -->
+
+
+<div class="container">
+  <!-- <h4 class="text-center">Flexbox utils in Bootstrap 4</h4> -->
+    <div class="row justify-content-around">
+        <div class="col-4">
+            <!-- <div id="snackbar">{{Mensajes}}</div> -->
+            <div id="eleccion"><h2>Elijo el: {{nuevoJuego.numeroIngresado}}</h2></div>
+            <!-- <div id="player1" class="card card-body mb-2">col-6</div> -->
+        </div>
+        <div class="col-4">
+            <div id="snackbar">{{Mensajes}}</div>
+            <!-- <h1>{{nuevoJuego.numeroIngresado}}</h1> -->
+            <!-- <div id="player1" class="card card-body mb-2">col-6</div> -->
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-4">
+            <div id="player1" class="card card-body mb-2">
+              <img src="assets/imagenes/businessman-is-confusing_76775-236.jpg" width="90%" alt="">
+              <label>Ingrese numero:</label><input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:90%"/>
+            </div>
+        </div>
+        <div class="col-4">
+            <div id="player2" class="card card-body mb-2">
+              <img src="assets/imagenes/businessman-is-confusing_76775-237.jpg" width="90%" alt="">
+              <h2><button *ngIf="nuevoJuego.numeroSecreto==0 " (click)="generarnumero()"  class="btn btn-info btn-lg">Nuevo número secreto</button></h2>
+              <h2 [hidden]="ocultarVerificar"><button  *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button></h2>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="div">
+            <h3><p *ngIf="nuevoJuego.numeroSecreto!=0" ><i class="fa fa-spinner fa-spin"></i>Esperando que ingrese un número</p></h3>
+            <h3 [hidden]="!nuevoJuego.gano">Usted adivino el número</h3>
+            <h3 [hidden]="nuevoJuego.gano">Usted aún no gano </h3>
+          </div>
+        </div>
+    </div>
+</div>

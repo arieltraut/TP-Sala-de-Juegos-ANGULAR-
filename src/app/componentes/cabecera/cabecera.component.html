@@ -1,12 +1,97 @@
-<div class="panel panel-default">
+<!-- <div class="panel panel-default">
   <div class="hero-text">
       <h1 style="font-size:50px">Sala de Juegos</h1>
       <p>Octavio villegas</p>
       <a href="https://github.com/octaviovillegas"target="_blank">en GitHub <i class="fa fa-github"></i></a>
       <a  routerLink="/QuienSoy" >Quien Soy? <i class="fa fa-user"></i></a>
-  </div>
-  <ul class="nav navbar-nav navbar-right">
+  </div> -->
+  <!-- <ul class="nav navbar-nav navbar-right">
           <li><a routerLink="/Registro"><span class="glyphicon glyphicon-user"></span>Registrarse</a></li>
           <li><a  routerLink="/Login"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
   </ul>
-</div>
+</div> -->
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/imagenes/logo.png" width="50" class="d-inline-block align-top logo" alt="">Sala de Juegos
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div *ngIf="!autenticacionService.isLoggedIn" class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a routerLink="/Registro" class="nav-link" href="#">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/Login" class="nav-link" href="#">Ingresar</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a  routerLink="/QuienSoy" class="nav-link" href="#">Quien soy?</a>
+            </li> -->
+          </ul>
+        </div>
+        <div *ngIf="autenticacionService.isLoggedIn" class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <h6 class="text-white">{{autenticacionService.Usuario.email}}</h6>
+            <li class="nav-item">
+              <a (click)="onLogout()" class="nav-link">Cerrar sesion</a>
+            </li>
+            <li class="nav-item">
+              <a  routerLink="/QuienSoy" class="nav-link" href="#">Quien soy?</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Navigation -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Sala de Juegos</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#trabajo">Trabajo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#frogger">Frogger</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#compatibilidad">Compatibilidad</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->

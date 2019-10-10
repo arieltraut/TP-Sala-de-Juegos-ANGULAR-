@@ -1,0 +1,46 @@
+<app-cabecera>  </app-cabecera>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 mx-auto">
+        <div class="rotate-center" *ngIf="ganador" style="width: 50%; margin-bottom: 10%">
+          <div class="text">
+            <h4>Acertaste!</h4>
+          </div>
+        </div>
+        <div class="wobble-hor-bottom" *ngIf="perdedor" style="width: 50%; margin-bottom: 10%">
+          <div class="text">
+           <h4 class="text-center" >Incorrecto!</h4>
+          </div>
+        </div>
+
+        <div class="comenzar center" style="margin-top: 10%">
+          <button id="comenzar" *ngIf="!respondiendo" (click)="juegoNuevo()" style="width: 30%;" >Comenzar</button>
+        </div>
+        <div class="typewriter" *ngIf=respondiendo>
+            <div class="typewriter" [ngClass]="{ 'typewriter-text': respondiendo}">{{fraseRandom.frase}}</div>
+        </div>
+        <div class="row" *ngIf="respondiendo">
+          <div class="col-lg-4" >
+              <button class="peli-button"  (click)="responder(fraseRandom.opciones[0])" style="width: 100%;margin: 10%;">{{fraseRandom.opciones[0]}}</button>
+          </div>
+          <div class="col-lg-4">
+              <button class="peli-button"  (click)="responder(fraseRandom.opciones[1])" style="width: 100%;margin: 10%;">{{fraseRandom.opciones[1]}}</button>
+          </div>
+          <div class="col-lg-4">
+              <button class="peli-button"  (click)="responder(fraseRandom.opciones[2])" style="width: 100%;margin: 10%;">{{fraseRandom.opciones[2]}}</button>
+          </div>
+        </div>
+        <div class="row" *ngIf="respondiendo">
+          <div class="col">
+              <button class="btn btn-danger"  (click)="terminar()" style="width: 30%;margin: 10%;">Terminar</button>
+          </div>
+          <!-- <div class="col">
+              <button class="btn btn-danger"  (click)="saltear()" style="width: 80%;margin: 10%;">Saltear</button>
+          </div> -->
+        </div>
+      </div>
+  </div>
+</div>
+
+

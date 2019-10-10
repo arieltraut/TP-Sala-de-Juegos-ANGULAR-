@@ -1,5 +1,5 @@
-
-import { Component, OnInit , Input, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { FirebaseService } from '../../servicios/firebase.service';
 
 @Component({
   selector: 'app-listado-de-resultados',
@@ -7,19 +7,24 @@ import { Component, OnInit , Input, EventEmitter} from '@angular/core';
   styleUrls: ['./listado-de-resultados.component.css']
 })
 export class ListadoDeResultadosComponent implements OnInit {
- @Input()
- listado: Array<any>;
-
-
-  constructor() {
-   }
-
-  ngOnInit() {
-
+  listado2: Array<any>;
+  @Input()   listado: Array<any>;
+  isLoading = false;
+  constructor(public firebaseService: FirebaseService) {
   }
 
-  ver() {
-    console.info(this.listado);
+  ngOnInit() {
+    this.obtenerResultados();
+  }
+
+  obtenerResultados() {
+    this.isLoading = true;
+    this.firebaseService.getResults()
+      .then(result => {
+        this.isLoading = false;
+        console.log(result);
+        this.listado2 = result;
+      });
   }
 
 }

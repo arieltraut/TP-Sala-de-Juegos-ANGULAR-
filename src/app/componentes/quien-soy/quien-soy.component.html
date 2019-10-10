@@ -1,60 +1,72 @@
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" href="./">Sala De Juegos</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="./QuienSoy#quien">Quien</a></li>
-          <li><a href="/TP_LAV4_2017/QuienSoy#que">Ques es</a></li>
-          <li><a href="./QuienSoy#donde">Donde</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <!-- First Container -->
-  <div id ="quiwn"class="container-fluid bg-1 text-center">
-    <h3 class="margin">Quién Soy?</h3>
-    <img src="./assets/imagenes/quiensoy.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-    <h3>Soy Un alumno de la UTN FRA</h3>
+<app-cabecera>  </app-cabecera>
+
+<header class="bg-primary text-white">
+  <div class="container text-center">
+    <h1>Quien soy?</h1>
+    <p class="lead">Ariel Traut, un alumno de la UTN. Este es mi trabajo practico.</p>
   </div>
-  
-  <!-- Second Container -->
-  <div id ="que" class="container-fluid bg-2 text-center">
-    <h3 class="margin">Esto es un trabajo práctico</h3>
-    <p>Cada universidad, cada facultad, cada carrera y obviamente cada materia en particular tiene estrategias didácticas y formas de evaluación diferentes. A pesar de que en muchos casos las universidades intentan estandarizar la forma de dictar clase para generar un orden en las planificaciones cuatrimestre a cuatrimestre, las formas de evaluación son elementales tanto para las instituciones y profesores como para los alumnos. A través de la evaluación formativa el educador busca información en el alumno para lograr comprender cómo se está
-      produciendo el proceso de aprendizaje y poder reajustar los objetivos pedagógicos. Y para el alumno es una muestra del progreso que está logrando y si puede aplicar, materializar y darle visibilidad a la comprensión del tema. Según Black y William (1998), la evaluación formativa, ayuda a que los estudiantes sean independientes a la hora del aprendizaje, es decir, se presenta como receptor, autorregulador y centro de esa misma evaluación. </p>
-    <a href="#" class="btn btn-default btn-lg">
-      <span class="glyphicon glyphicon-file"></span> Descargar PDF
-    </a>
-  </div>
-  
-  <!-- Third Container (Grid) -->
-  <div id ="donde" class="container-fluid bg-3 text-center">    
-    <h3 class="margin">Dónde Funciona?</h3><br>
+</header>
+
+<section id="trabajo">
+  <div class="container">
     <div class="row">
-      <div class="col-sm-4">
-        <p>Con las tecnologias WEB que permiten desarrollar aplicaciones multiplataforma</p>
-        <img src="./assets/imagenes/quiensoy1.png" class="img-responsive margin imagenDeQuienSoy"  alt="Image">
-      </div>
-      <div class="col-sm-4"> 
-        <p>Principalmente orientada a la experiencia del usuario, garantizando que su funcionamieto sea fluido y pensado en el comportamiento del usuario y en la funcionalidad.</p>
-        <img src="./assets/imagenes/quiensoy2.jpg" class="img-responsive margin imagenDeQuienSoy" alt="Image">
-      </div>
-      <div class="col-sm-4"> 
-        <p>Para los sistemas operativos lideres en el mercado del consumo masivo</p>
-        <img src="./assets/imagenes/quiensoy3.png" class="img-responsive margin imagenDeQuienSoy" alt="Image">
+      <div class="col-lg-8 mx-auto">
+        <h2>Esto es un trabajo práctico</h2>
+        <p class="lead">Cada universidad, cada facultad, cada carrera y obviamente cada materia en particular tiene estrategias didácticas y formas de evaluación diferentes. A pesar de que en muchos casos las universidades intentan estandarizar la forma de dictar clase para generar un orden en las planificaciones cuatrimestre a cuatrimestre.</p>
+        <!-- <ul>
+          <li>Clickable nav links that smooth scroll to page sections</li>
+          <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+          <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+          <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+        </ul> -->
       </div>
     </div>
   </div>
-  
-  <!-- Footer -->
-  <footer class="container-fluid bg-4 text-center">
-    <p>Modificado por <a href="https://www.octavio.com.ar">www.octavio.com.ar</a></p> 
-  </footer>
+</section>
+
+<section id="frogger" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <h2>Frogger</h2>
+        <p class="lead">El objetivo del juego es guiar una rana hasta su hogar. Para hacerlo, la rana debe evitar coches mientras cruza una carretera congestionada y luego cruzar un río lleno de amenazas. El jugador hábil obtendrá puntos adicionales a lo largo del camino.</p>
+      </div>
+      <div class="col-2">
+        <img src="../../../assets/imagenes/frogger.png" alt="" style="width:200px">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="compatibilidad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Donde funciona?</h2>
+        <div class="row">
+              <div class="col">
+                <img src="../../../assets/imagenes/world-wide-web.png" alt="">
+                <p class="lead">Con las tecnologias WEB que permiten desarrollar aplicaciones multiplataforma.</p>
+              </div>
+              <div class="col">
+                  <img src="../../../assets/imagenes/user.png" alt="">
+                  <p class="lead">Principalmente orientada a la experiencia del usuario, garantizando que su funcionamieto sea fluido y pensado en el comportamiento del usuario y en la funcionalidad.</p>
+              </div>
+              <div class="col">
+                  <img src="../../../assets/imagenes/sharethis.png" alt="">
+                <p class="lead">Para los sistemas operativos lideres en el mercado del consumo masivo.</p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Sala de Juegos 2019</p>
+  </div>
+  <!-- /.container -->
+</footer>
