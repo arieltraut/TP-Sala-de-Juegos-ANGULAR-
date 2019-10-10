@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #e9ecef;
+  background: #536d88;
 }
 .contenedor, div, span, h1, label, section, input
 {
@@ -37,7 +37,7 @@ height: 150px;
   width: 80px;
   height: 80px;
   border-bottom: 3px solid grey;
-  background-color: #999999;
+  background-color: #7cce8e;
   border-radius: 10px;
   size: 50px;
   font-size: 50px;

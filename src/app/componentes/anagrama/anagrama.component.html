@@ -1,6 +1,6 @@
 
 <div class="contenedor">
-  <h4>Correctas:</h4>
+  <h4>Aciertos:</h4>
   <div id="countScore"><span>{{score}}</span></div>
   <div id="canvas">
     <div id="words">
@@ -10,13 +10,13 @@
   <form id="control">
     <h4 class="text-center">Tiempo: {{seconds}}</h4>
     <div *ngIf="seconds > 0">
-      <input type="text" name="answer" [(ngModel)]="answer" focus="answer.length === 0" placeholder="Ingrese su suposición"
+      <input type="text" name="answer" [(ngModel)]="answer" focus="answer.length === 0" placeholder="Ingresar palabra"
         autofocus="autofocus">
     </div>
     <div>
-      <button *ngIf="seconds > 0" class="btn btn-dark text-uppercase mb-2 rounded-pill shadow-sm" type="submit" (click)="validateWord()">Enviar</button>
-      <button *ngIf="seconds > 0" class="btn btn-dark text-uppercase mb-2 rounded-pill shadow-sm" (click)="nextWord()">Proxima</button>
-      <button *ngIf="seconds === 0" class="btn btn-dark text-uppercase mb-2 rounded-pill shadow-sm" (click)="initGame()">Jugar
+      <button *ngIf="seconds > 0" class="btn btn-success text-uppercase mb-2 mr-3 shadow-sm" type="submit" (click)="validateWord()">Enviar</button>
+      <button *ngIf="seconds > 0" class="btn btn-secondary text-uppercase mb-2 mr-3 shadow-sm" (click)="nextWord()">Proxima</button>
+      <button *ngIf="seconds === 0" class="btn btn-info text-uppercase mb-2 mr-3 shadow-sm" (click)="initGame()">Jugar
         de nuevo</button>
     </div>
   </form>
