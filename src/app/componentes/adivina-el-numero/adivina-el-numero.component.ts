@@ -26,6 +26,7 @@ export class AdivinaElNumeroComponent implements OnInit {
     this.contador = 0;
   }
   verificar() {
+
     this.contador++;
     this.ocultarVerificar = true;
     console.info('numero Secreto:', this.nuevoJuego.gano);
@@ -34,6 +35,7 @@ export class AdivinaElNumeroComponent implements OnInit {
       this.enviarJuego.emit(this.nuevoJuego);
       this.MostarMensaje('Sos un Genio!!!', true);
       this.nuevoJuego.numeroSecreto = 0;
+      this.puntaje++;
       this.loadResult();
 
     } else {

@@ -1,22 +1,29 @@
-<!-- <app-banner titulo="Jugadores" subtitulo="Listado de jugadores registrados."></app-banner> -->
-<table class="table table-condensed">
-  <thead class="thead-dark">
-    <tr>
-      <th>Usuario</th>
-      <th>Correo</th>
-      <th>Fecha Alta</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let jugador of listado">
-      <td>{{jugador.name}} </td>
-      <td>{{jugador.mail}} </td>
-      <td>{{jugador.createdAt}} </td>
-    </tr>
-  </tbody>
-</table>
-<div *ngIf="isLoading" class="d-flex justify-content-center">
-  <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
+<app-cabecera>  </app-cabecera>
+
+<div class="container" style="margin-top: 100px">
+  <div class="row">
+    <div class="col-9">
+      <table class="table table-condensed">
+        <thead class="thead-dark">
+          <tr>
+            <th>Usuario</th>
+            <th>Correo</th>
+            <th>Fecha Alta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let jugador of listado">
+            <td>{{jugador.name}} </td>
+            <td>{{jugador.mail}} </td>
+            <td>{{jugador.createdAt}} </td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="isLoading" class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

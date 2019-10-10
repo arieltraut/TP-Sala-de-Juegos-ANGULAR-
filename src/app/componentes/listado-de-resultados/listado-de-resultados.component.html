@@ -1,27 +1,36 @@
-<table class="table table-condensed table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th>Fecha</th>
-      <th>Jugador</th>
-      <th>Juego</th>
-      <th>Puntaje / Resultado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let juego of listado2">
-      <td>{{juego.createdAt}} </td>
-      <td>{{juego.idUser}} </td>
-      <td>{{juego.game}} </td>
-      <td>{{juego.points}} -
-        <span *ngIf="juego.win">Gano </span>
-        <span *ngIf="!juego.win">Perdio</span>
-      </td>
-    </tr>
+<app-cabecera>  </app-cabecera>
 
-  </tbody>
-</table>
-<div *ngIf="isLoading" class="d-flex justify-content-center">
-  <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
+<div class="container" style="margin-top: 100px">
+  <div class="row">
+    <div class="col-9">
+      <table class="table table-condensed table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Fecha</th>
+            <th>Jugador</th>
+            <th>Juego</th>
+            <th>Puntaje / Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let juego of listado2">
+            <td>{{juego.createdAt}} </td>
+            <td>{{juego.idUser}} </td>
+            <td>{{juego.game}} </td>
+            <td>{{juego.points}} -
+              <span *ngIf="juego.win">Gano </span>
+              <span *ngIf="!juego.win">Perdio</span>
+            </td>
+          </tr>
+
+        </tbody>
+    </table>
+    <div *ngIf="isLoading" class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    </div>
   </div>
 </div>
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../../servicios/firebase.service';
 
 @Component({
   selector: 'app-anagrama',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./anagrama.component.css']
 })
 export class AnagramaComponent implements OnInit {
+  [x: string]: any;
 
   score;
   intentos: number;
@@ -15,12 +17,11 @@ export class AnagramaComponent implements OnInit {
   letterAnimation = 0;
   timerPromise;
   correctWord = '';
-  words = ['VIOLETAS', 'HUEVO', 'MANTECA', 'FRUTILLA', 'JARRON', 'ROJO', 'VERDE',
-    'PERA', 'MEXICO', 'ABIERTO', 'PAGAR', 'BIEN', 'PEPINO', 'DINERO',
-    'PAZ', 'AMOR', 'TIEMPO', 'AMIGOS', 'PERRO', 'FLORES', 'VIDRIO', 'PASTO',
-    'BOTE', 'HUMANO', 'AUTO', 'CABLE', 'MUJER', 'TELEFONO'];
+  words = ['MESA', 'PAN', 'MANZANA', 'FRUTILLA', 'MOTO', 'ROJO', 'VERDE',
+    'PERA', 'PAISES', 'ABIERTO', 'PAGAR', 'BIEN', 'PEPINO', 'DINERO',
+    'PAZ', 'AMOR', 'TIEMPO', 'AMIGOS', 'GATO', 'FLORES', 'VIDRIO', 'PASTO'];
 
-  constructor() { } // public firebaseService: FirebaseService
+  constructor(public firebaseService: FirebaseService) { } // public firebaseService: FirebaseService
 
   ngOnInit() {
     this.initGame();
@@ -100,10 +101,10 @@ export class AnagramaComponent implements OnInit {
   }
 
   loadResult() {
-    // this.firebaseService.addResult('Anagrama', this.score, true)
-    //   .then(result => {
-    //     console.log('insert result');
-    //   });
+    this.firebaseService.addResult('Anagrama', this.score, true)
+      .then(result => {
+        console.log('insert result');
+      });
   }
 
 }

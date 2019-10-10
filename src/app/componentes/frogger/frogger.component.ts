@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../../servicios/firebase.service';
 
 @Component({
   selector: 'app-frogger',
@@ -28,7 +29,7 @@ export class FroggerComponent implements OnInit {
   termina = false;
 
 
-  constructor( ) {}
+  constructor(public firebaseService: FirebaseService ) {}
 
   ngOnInit() {
   }
@@ -59,6 +60,7 @@ export class FroggerComponent implements OnInit {
     if (this.respuesta.toLowerCase() == guess.toLowerCase()) {
       this.ganador = true;
       this.perdedor = false;
+      this.loadResult();
     } else {
         this.perdedor = true;
     }
@@ -69,6 +71,13 @@ export class FroggerComponent implements OnInit {
     this.respondiendo = false;
     this.termina = true;
     this.tiempo = 0;
+  }
+
+  loadResult() {
+    this.firebaseService.addResult('CinemaQuotes', 1, true)
+      .then(result => {
+        console.log('insert result');
+      });
   }
 
 

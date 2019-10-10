@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { JuegoPiedraPapelTijera } from '../../clases/juego-piedra-papel-tijera';
+import { FirebaseService } from '../../servicios/firebase.service';
 
 @Component({
   selector: 'app-ppt',
@@ -16,7 +17,7 @@ export class PptComponent implements OnInit {
   puntosPc = 0;
   mensaje = ' ';
 
-  constructor() {
+  constructor(public firebaseService: FirebaseService) {
     this.nuevoPpt = new JuegoPiedraPapelTijera();
    }
 
@@ -50,13 +51,20 @@ export class PptComponent implements OnInit {
    }
 
    private TerminarJuego() {
-    console.log('Estoy en terminar juego', this.nuevoPpt);
     this.enviarJuego.emit(this.nuevoPpt);
     if (this.nuevoPpt.gano) {
       this.mensaje = '¡¡¡Ganaste!!!';
+      this.loadResult();
     } else {
       this.mensaje = '¡¡Perdiste!! Seguí participando...';
     }
    }
+
+   loadResult() {
+    this.firebaseService.addResult('Piedra, Papel o Tijeta', 1, true)
+      .then(result => {
+        console.log('insert result');
+      });
+  }
 
 }
